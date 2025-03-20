@@ -1,0 +1,9 @@
+crontab -e
+
+
+* * * * * sh ~/EventServer/Execute/appendUptime.sh
+* * * * * sh ~/EventServer/Execute/restartPythonServer.sh
+* * * * * sh ~/EventServer/Execute/restartReactApp.sh
+* * * * * sh ~/EventServer/Execute/restartClonePythonServer.sh
+* * * * * sh ~/EventServer/Execute/restartCloneReactApp.sh
+0,30 * * * * sh ~/EventServer/Execute/killsshagent.sh
